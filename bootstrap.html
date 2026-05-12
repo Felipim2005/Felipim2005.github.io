@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Pressione o butão</title>
+
+<!-- Bootstrap 4.3.1 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="booty.css">
+</head>
+
+<body class="d-flex align-items-center justify-content-center" style="height:100vh;">
+
+<div class="container text-center">
+    <h1>o botão faz um som sempre que pressionado</h1>
+    <p>pressione o botão</p>
+    <p>para ouvir o som</p> 
+    
+    <ul class="list-unstyled">
+        <li>pressione</li>
+        <li>o </li>
+        <li>botão</li>
+    </ul>
+
+    <h2>e ele toca!!</h2>
+
+    <!-- Botão central -->
+    <button class="btn btn-primary btn-lg mt-4" onclick="tocarSom()">
+        Tocar Som
+    </button>
+
+    <!-- Áudio -->
+   
+    <audio id="ai" src="aiiii-aiii-aiiii.mp3"></audio>
+    <audio id="kiko" src="bem-te-vi-assobio.mp3"></audio>
+    <audio id="makitaa" src="makitaa.mp3"></audio>
+    <audio id="ronaldo" src="ronaldo.mp3"></audio>
+
+    <p class="mt-4">
+
+    </p>
+</div>
+
+<script>
+function tocarSom() {
+    let sons = ["ai", "kiko", "ronaldo", "makitaa"];
+    
+    let escolhido = sons[Math.floor(Math.random() * sons.length)];
+    
+    let audio = document.getElementById(escolhido);
+    audio.currentTime = 0;
+    audio.play();
+}
+</script>
+
+</body>
+</html>
+
+
+
